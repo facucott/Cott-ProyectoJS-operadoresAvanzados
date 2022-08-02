@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Varta:wght@400;700&display=swap');
+
+@import "_header";
+
+@import "_footer";
+
+@import "_footer2";
+
+// VARIABLE: FUENTE
+
+$font: 'Varta', sans-serif;
+
+// VARIABLE: COLOR
+
+$color1: black;
+$color2: white;
+$color3: #d4bf97;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font;
+}
+
+body{
+    max-width: 100%;
+}
+
+// SCROLL BAR
+
+// MIXIN
+
+@mixin scrollbar ($b-color, $width, $border){
+    background-color: $b-color;
+    width: $width;
+    border: $border;
+}
+
+::-webkit-scrollbar-track{
+    @include scrollbar($color1, 100% , none)
+}
+::-webkit-scrollbar{
+    @include scrollbar($color1, 12px , none)
+}
+::-webkit-scrollbar-thumb{
+    @include scrollbar($color3, 100% , solid 2px $color1)
+}
+
+// SHOP
+
+.titulo{
+    color: $color1;
+    background-color: $color3;
+    text-align: center;
+    padding: 50px 50px 20px 50px;
+
+        h3{
+            font-weight:500;
+        }
+}
+
+.producto{
+    margin: 70px;
+}
+
+.galeria-disco{
+    transition: all 400ms;
+    padding: 0px 0 70px 0;
+    margin: 0 50px;
+    align-items: center;
+    background-color: $color3;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    img{
+        max-width: 300px;
+        transition: all 400ms;
+        &:hover{transform: scale(1.05)}
+    }
+}
+
+.card-title{
+    color: $color1;
+    text-align: center;
+}
+
+.item-price{
+    color: $color1;
+    text-align: center;
+}
+
+.btn-comprar{
+    text-align: center;
+    display: block;
+    align-items: center;
+    color: $color3;
+    background-color: $color1;
+    text-decoration: none;
+    padding: 10px;
+    border: 1px solid $color3;
+
+    &:hover{background-color: #d4bf97; color: black; border: 1px solid $color1;
+            .fa-cart-plus{background-color: $color3; color: $color1}
+            }
+}
+
+//SHOP
+
+.boton-vaciar{
+    &:hover{background-color: #d4bf97; color: black; border: 1px solid $color1;}
+}
+
+.fa-trash-can{
+    color: $color3;
+    background-color: $color1;
+    font-size: 25px;
+    padding: 10px;
+    &:hover{color: $color2}
+}
+
+.productoEnCarrito{
+    border: solid 2px $color3;
+    padding: 30px;
+    margin: 20px
+}
+
+#contadorCarrito{
+    font-weight: bolder;
+}
+
+// MEDIA QUERIES
+
+@media only screen and (max-width: 1411px){
+
+    // HEADER
+
+    .header{
+        padding: 10px 20px;
+        display: grid;
+        grid-template-areas:
+        "label nombreBanda";
+
+        h1{
+            padding-top: 4px;
+            padding-right: 20px;
+        }
+
+        label{
+            margin:10px
+        }
+    }
+    label{
+        grid-area: label;
+    }
+    .nombreBanda{
+        grid-area: nombreBanda;
+    }
+
+    // BOTÓN DE MENÚ
+
+    #menu-button:checked ~ ul{
+        right: 0;
+    }
+    .check{
+        display: flex;
+    }
+
+    // NAV
+
+    .nav{
+        position: fixed;
+        background-color: $color1;
+        top: 80px;
+        width: 50%;
+        left: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        left: -100%;
+        transition: all 0.8s;
+
+        ul{
+            flex-direction: column;
+            position: fixed;
+        }
+
+        ul li{
+            line-height: 50px;
+        }
+
+        ul li a{
+            font-size: 20px;
+        }
+    }
+
+    #menu-button:checked ~ nav{
+        left: 0
+    }
+
+}

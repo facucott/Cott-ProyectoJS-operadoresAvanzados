@@ -1,0 +1,208 @@
+// HEADER
+
+// VARIABLE: COLOR
+
+$color1: black;
+$color2: white;
+$color3: #d4bf97;
+
+.header{
+    background-color: $color1;
+    display: grid;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    width: 100%;
+    padding: 20px 100px;
+    position: sticky;
+    top:0;
+    z-index: 10;
+
+    h1{
+        color: $color3;
+        letter-spacing: 2px;
+        font-size: 25px;
+        font-weight: bolder;
+        margin: auto 0;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 100px 0 0;
+    }
+
+    grid-template-areas:
+    "nav nombreBanda";
+}
+.nav{
+    grid-area: nav;
+
+    .nav-item{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin: 1rem;
+        align-items: center;
+    }
+    ul li{
+        list-style: none;
+        font-size: large;
+        font-weight: 600;
+        font-size: 20px;
+    }
+    ul li a{
+        text-decoration: none;
+        color: $color3
+    }
+
+}
+.nombreBanda{
+    grid-area: nombreBanda;
+}
+
+// DROPDOWN MENU
+
+.dropdown-menu{
+    background-color: $color1;
+    
+    .dropdown-item:focus, .dropdown-item:hover {
+        color: none;
+        &::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 3px;
+        background-color: $color2;
+        transition: width 0.3s ease-out;}
+    }
+
+}
+
+.nav-item a:hover {
+    color: $color2;
+    background: none;
+    bottom: none;
+}
+
+// .dropdown__container{
+//     position: relative;
+// }
+// .dropdown-menu{
+//     position: absolute;
+//     background-color: $color1;
+//     opacity: 0;
+//     pointer-events: none;
+//     transform: translateY(10px);
+//     transition: 0.5s all;
+
+//     a{
+//         &:hover{background-color: $color1};
+//         display: inline;
+//         pointer-events: all;
+//     }
+
+// }
+
+// .dropdown__container > a:hover, a:focus + .dropdown-menu{
+//     opacity: 1;
+//     transform: translateY(0px);
+// }
+
+// NAV
+
+.fa-solid{
+    color: $color3;
+    background-color: $color1;
+    text-align: center;
+}
+.nav-item a{
+    color: $color3;
+    text-decoration: none;
+    margin: 0 20px 0 20px;
+    text-decoration: none;
+    color: $color3;
+    position: relative;
+    &:hover{color: $color2};
+    &::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 3px;
+        background-color: $color2;
+        transition: width 0.3s ease-out;
+    }
+    &:hover::before{
+        width: 100%;
+    }
+}
+.nav-item li ul li a{
+    &::before{
+        height: 0px}
+}
+
+// LINK ACTIVE
+
+.navbar ul li a.linkActive{
+    color: $color2;
+}
+
+// MENÚ
+
+#menu-button{
+    display: none;
+}
+.check{
+    display: none;
+}
+header label{
+    padding: 15px;
+    width: 30px;
+    color: $color3;
+    &:hover{cursor: pointer}
+}
+
+// MODAL
+
+.modal-content{
+    border: solid 1px $color3
+}
+.boton-ticket{
+    border: none;
+    text-decoration: none;
+
+    i{
+        &:hover{color: $color2}
+    }
+}
+.fa-ticket{
+    font-size: 30px;
+}
+
+.fa-cart-shopping{
+    font-size: 25px;
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+.boton-modal{
+    background-color: $color1;
+    border: 1px solid $color3;
+    padding: 10px;
+
+    a{
+        text-decoration: none;
+        color: $color3;
+        &:hover{color: $color1}
+    }
+    &:hover{
+        background-color: $color3;
+        color: $color1
+    }
+}
+.modal-body{
+    text-align: center;
+    padding: 20px 0 0 0
+}

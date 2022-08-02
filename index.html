@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="La discografía de los Quarantine se compone de 8 singles editados durante la primera etapa de la Pandemia, y un disco de estudio publicado el diciembre pasado">
+    <meta name="keywords" content="musica, discos, discografía, albúm, singles, lp, disco">
+    <link rel="sortcut icon" href="img/favicon.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="sass/estilo.css">
+    <title>T3OQ | Shop</title>
+</head>
+<body>
+
+  <!-- header inicio -->
+
+  <header class="header">
+    <h1>T3OQ</h1>
+    <label for="menu-button" class="check"><i class="fa-solid fa-bars"></i></label>
+    <input type="checkbox" id="menu-button">
+    <nav class="nav">
+        <ul class="nav-item">
+            <li><a href="../index.html" class="linkActive">Inicio</a></li>
+            <li><a href="../pages/nosotros.html">Nosotros</a></li>
+            <li><a href="../pages/musica.html">Música</a></li>
+            <li class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="color:#d4bf97;">
+              <a href="#">Galería</a>
+              </li>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="../pages/dama2.html">La Dama</a></li>
+              <li><a class="dropdown-item" href="../pages/dama1.html">La Dama de Bollini</a></li>
+              <li><a class="dropdown-item" href="../pages/eter.html">Éter Club</a></li>
+              </ul>
+            <li><a href="../pages/fechas.html">Fechas</a></li>
+            <li><a href="../pages/contacto.html">Contacto</a></li>
+            <li><button type="button" class="btn btn-primary boton-ticket nav-item" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: #000000;"><i class="fa-solid fa-ticket"></i></button></li>
+            <li><button id="boton-carrito" type="button" class="btn btn-primary boton-ticket nav-item" data-bs-toggle="modal" data-bs-target="#exampleModa2" style="background-color: #000000;"><i class="fa-solid fa-cart-shopping"></i><span id="contadorCarrito" style="color: #d4bf97">0</span></button></li>
+        </ul>
+    </nav>
+  </header>
+
+  <!-- header fin -->
+
+    <!-- Modal inicio -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+      <div class="modal-content" style="background-color: #000000;">
+          <div class="modal-header" style="color:#d4bf97;">
+          <h5 class="modal-title" id="exampleModalLabel">Sacá tus entradas para el próximo Show!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" style="color:#d4bf97;">
+          <p>The Three Of Quarantine en "Vermu Social Clu"<br>
+          <br> 15 de julio, 22 hrs.-
+          <br> Paraguay 779.
+          </p>
+          </div>
+          <div class="modal-footer" style="color:#d4bf97;">
+          <button type="button" class="boton-modal" data-bs-dismiss="modal"><a href="https://alpogo.com/evento/157-the-three-of-quarantine-vermu-social-clu-7296" target="_blank">Alpogo.com</a></button>
+          </div>
+      </div>
+      </div>
+  </div>
+
+  <!-- Modal fin -->
+
+
+      <!-- Modal Carrito -->
+
+      <!-- Modal carrito inicio-->
+
+      <div class="modal fade modal-contenedor" id="exampleModa2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content modal-carrito" style="background-color: #000000;">
+            <div class="modal-header card text-center" style="color:#d4bf97; background-color: #000000;">
+            <h5 class="modal-title" id="exampleModalLabel">Tu carrito contiene los siguientes productos:</h5><br>
+
+            <div id="carrito-contenedor">
+
+            </div>
+
+            <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p><br>
+            <button id="vaciar-carrito" class="boton-agregar btn-comprar text-center boton-vaciar">Vaciar carrito</button>
+
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="color:#d4bf97;">
+            </div>
+            <div class="modal-footer" style="color:#d4bf97;">
+            <button id="myBtn" type="button" class="boton-modal" data-bs-dismiss="modal"><a href="#">Comprar</a></button>
+            </div>
+        </div>
+        </div>
+    </div>
+  
+    <!-- Modal carrito fin -->
+
+  <!-- Shop inicio -->
+  
+  <div class="titulo">
+    <h3>Shop</h3>
+
+    <div id="contenedor-productos" class="galeria-disco">
+    </div>
+
+</div>
+
+  <!-- Shop fin -->
+
+    <!-- footer inicio -->
+
+    <div class="container-fluid">
+
+        <div class="footer2 row row-cols-1 row-cols-md-3" style="background-color: #000000;">
+          
+          <div class="footer-logos2 col-mb-4">
+              <a href="https://www.youtube.com/channel/UClwf_6itnucFmO89txe_Mow" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+              <a href="https://www.instagram.com/losquarantineok/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://open.spotify.com/artist/1ADAzs1eow9RrQHMWYH6HS" target="_blank"><i class="fa-brands fa-spotify"></i></a>
+          </div>
+      
+          <div class="footer-copyright2 col-mb-4">
+              <h6>
+                  © the three of quarantine, 2022 - todos los derechos reservados 
+              </h6>
+          </div>
+
+    <div class="float-right2 col-mb-4">
+      <h6 class="boton-subir2"><a href="#">Subir</a></h6>
+    </div>
+      
+      </div>
+      </div>
+      
+      <!-- footer fin -->
+      
+    
+    <!-- fonteawesome/aos -->
+
+    <script src="https://kit.fontawesome.com/4bf6ffe6f6.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+      </script>
+
+    <!-- bootstrap -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/stock.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/carrito.js"></script>
+</body>
+</html>

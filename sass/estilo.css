@@ -1,0 +1,504 @@
+@import url("https://fonts.googleapis.com/css2?family=Varta:wght@400;700&display=swap");
+.header {
+  background-color: black;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  width: 100%;
+  padding: 20px 100px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+      grid-template-areas: "nav nombreBanda";
+}
+
+.header h1 {
+  color: #d4bf97;
+  letter-spacing: 2px;
+  font-size: 25px;
+  font-weight: bolder;
+  margin: auto 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0 100px 0 0;
+}
+
+.nav {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: nav;
+}
+
+.nav .nav-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav ul li {
+  list-style: none;
+  font-size: large;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #d4bf97;
+}
+
+.nombreBanda {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: nombreBanda;
+}
+
+.dropdown-menu {
+  background-color: black;
+}
+
+.dropdown-menu .dropdown-item:focus, .dropdown-menu .dropdown-item:hover {
+  color: none;
+}
+
+.dropdown-menu .dropdown-item:focus::before, .dropdown-menu .dropdown-item:hover::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background-color: white;
+  -webkit-transition: width 0.3s ease-out;
+  transition: width 0.3s ease-out;
+}
+
+.nav-item a:hover {
+  color: white;
+  background: none;
+  bottom: none;
+}
+
+.fa-solid {
+  color: #d4bf97;
+  background-color: black;
+  text-align: center;
+}
+
+.nav-item a {
+  color: #d4bf97;
+  text-decoration: none;
+  margin: 0 20px 0 20px;
+  text-decoration: none;
+  color: #d4bf97;
+  position: relative;
+}
+
+.nav-item a:hover {
+  color: white;
+}
+
+.nav-item a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background-color: white;
+  -webkit-transition: width 0.3s ease-out;
+  transition: width 0.3s ease-out;
+}
+
+.nav-item a:hover::before {
+  width: 100%;
+}
+
+.nav-item li ul li a::before {
+  height: 0px;
+}
+
+.navbar ul li a.linkActive {
+  color: white;
+}
+
+#menu-button {
+  display: none;
+}
+
+.check {
+  display: none;
+}
+
+header label {
+  padding: 15px;
+  width: 30px;
+  color: #d4bf97;
+}
+
+header label:hover {
+  cursor: pointer;
+}
+
+.modal-content {
+  border: solid 1px #d4bf97;
+}
+
+.boton-ticket {
+  border: none;
+  text-decoration: none;
+}
+
+.boton-ticket i:hover {
+  color: white;
+}
+
+.fa-ticket {
+  font-size: 30px;
+}
+
+.fa-cart-shopping {
+  font-size: 25px;
+}
+
+.btn:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.boton-modal {
+  background-color: black;
+  border: 1px solid #d4bf97;
+  padding: 10px;
+}
+
+.boton-modal a {
+  text-decoration: none;
+  color: #d4bf97;
+}
+
+.boton-modal a:hover {
+  color: black;
+}
+
+.boton-modal:hover {
+  background-color: #d4bf97;
+  color: black;
+}
+
+.modal-body {
+  text-align: center;
+  padding: 20px 0 0 0;
+}
+
+.footer {
+  padding: 30px 0 20px 0;
+}
+
+.footer-logos {
+  text-align: center;
+  margin: 5px 0 10px 0;
+}
+
+.footer-logos i {
+  margin: 0 30px;
+  font-size: 30px;
+  color: black;
+}
+
+.footer-copyright {
+  color: black;
+  text-align: center;
+  margin: 10px 0 10px 0;
+}
+
+.float-right {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.float-right a {
+  text-decoration: none;
+  color: black;
+}
+
+.float-right a:hover {
+  color: white;
+}
+
+.footer2 {
+  padding: 30px 0 20px 0;
+}
+
+.footer-logos2 {
+  text-align: center;
+  margin: 5px 0 10px 0;
+}
+
+.footer-logos2 i {
+  margin: 0 30px;
+  font-size: 30px;
+  color: #d4bf97;
+}
+
+.footer-copyright2 {
+  color: #d4bf97;
+  text-align: center;
+  margin: 10px 0 10px 0;
+}
+
+.float-right2 {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.float-right2 a {
+  text-decoration: none;
+  color: white;
+}
+
+.float-right2 a:hover {
+  color: black;
+}
+
+.boton-subir2 a {
+  color: #d4bf97;
+  text-decoration: none;
+  padding: 10px;
+  border: 1px solid #d4bf97;
+}
+
+.boton-subir2 a:hover {
+  background-color: #d4bf97;
+  color: black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Varta", sans-serif;
+}
+
+body {
+  max-width: 100%;
+}
+
+::-webkit-scrollbar-track {
+  background-color: black;
+  width: 100%;
+  border: none;
+}
+
+::-webkit-scrollbar {
+  background-color: black;
+  width: 12px;
+  border: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d4bf97;
+  width: 100%;
+  border: solid 2px black;
+}
+
+.titulo {
+  color: black;
+  background-color: #d4bf97;
+  text-align: center;
+  padding: 50px 50px 20px 50px;
+}
+
+.titulo h3 {
+  font-weight: 500;
+}
+
+.producto {
+  margin: 70px;
+}
+
+.galeria-disco {
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+  padding: 0px 0 70px 0;
+  margin: 0 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #d4bf97;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.galeria-disco img {
+  max-width: 300px;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+}
+
+.galeria-disco img:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.card-title {
+  color: black;
+  text-align: center;
+}
+
+.item-price {
+  color: black;
+  text-align: center;
+}
+
+.btn-comprar {
+  text-align: center;
+  display: block;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #d4bf97;
+  background-color: black;
+  text-decoration: none;
+  padding: 10px;
+  border: 1px solid #d4bf97;
+}
+
+.btn-comprar:hover {
+  background-color: #d4bf97;
+  color: black;
+  border: 1px solid black;
+}
+
+.btn-comprar:hover .fa-cart-plus {
+  background-color: #d4bf97;
+  color: black;
+}
+
+.boton-vaciar:hover {
+  background-color: #d4bf97;
+  color: black;
+  border: 1px solid black;
+}
+
+.fa-trash-can {
+  color: #d4bf97;
+  background-color: black;
+  font-size: 25px;
+  padding: 10px;
+}
+
+.fa-trash-can:hover {
+  color: white;
+}
+
+.productoEnCarrito {
+  border: solid 2px #d4bf97;
+  padding: 30px;
+  margin: 20px;
+}
+
+#contadorCarrito {
+  font-weight: bolder;
+}
+
+@media only screen and (max-width: 1411px) {
+  .header {
+    padding: 10px 20px;
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "label nombreBanda";
+  }
+  .header h1 {
+    padding-top: 4px;
+    padding-right: 20px;
+  }
+  .header label {
+    margin: 10px;
+  }
+  label {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: label;
+  }
+  .nombreBanda {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: nombreBanda;
+  }
+  #menu-button:checked ~ ul {
+    right: 0;
+  }
+  .check {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .nav {
+    position: fixed;
+    background-color: black;
+    top: 80px;
+    width: 50%;
+    left: 0;
+    bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    left: -100%;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
+  }
+  .nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: fixed;
+  }
+  .nav ul li {
+    line-height: 50px;
+  }
+  .nav ul li a {
+    font-size: 20px;
+  }
+  #menu-button:checked ~ nav {
+    left: 0;
+  }
+}
+/*# sourceMappingURL=estilo.css.map */
